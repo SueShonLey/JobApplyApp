@@ -269,7 +269,7 @@ namespace WinFormsApp1
 
 ¾Ü¾ø£º{rejectedCount}
 
-ÆÀ¹À£º{evaluatingCount}";
+Î´ÓÐ½á¹û£º{evaluatingCount}";
         }
 
         private string GetCompanyStatus(int? status)
