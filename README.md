@@ -35,8 +35,8 @@
 ### 3. 🔍 智能查询功能
 - **近 7 天有反馈**：一键筛选近期活跃投递
 - **显示非拒绝**：自动过滤已拒岗位，聚焦有效机会
-- **按阶段筛选**：支持笔试 / 一面 / 二面 / HR 面等多阶段过滤
-- **按公司类型筛选**：按行业、企业性质分类查看
+- **按阶段筛选**：支持多阶段过滤
+- **按公司类型筛选**：按企业性质分类查看
 
 ### 4. 📣 招聘渠道维护
 - 自定义管理招聘渠道（BOSS、智联、猎聘等）
@@ -50,8 +50,10 @@
 
 ## 🖼️ 界面预览
 
+<img width="1263" height="715" alt="image" src="https://github.com/user-attachments/assets/2d4bf70e-bef9-46c7-95f0-46a19cd80394" />
 
 
+<img width="1114" height="685" alt="image" src="https://github.com/user-attachments/assets/b3f8bfe6-f650-405d-a13f-b56e278de267" />
 
 ---
 
