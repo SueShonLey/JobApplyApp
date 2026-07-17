@@ -36,6 +36,12 @@ namespace WinFormsApp1
 
             //默认查询
             QueryInfos();
+
+            //开始时间记录
+            TimerExtentions.RegisterTimer("TimeNow", 1000, () =>
+            {
+                label1.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            }, true);
         }
 
         /// <summary>
@@ -230,6 +236,18 @@ namespace WinFormsApp1
                         }
 
                     }
+
+                    if (feilds.Equals("Stage"))
+                    {
+                        if (values.Equals("评估中"))
+                        {
+                            cells.ForeColor = Color.Orange;
+                        }
+                        else if (values.Equals("已面试"))
+                        {
+                            cells.ForeColor = Color.Blue;
+                        }
+                    }
                 }
             });
 
@@ -404,7 +422,7 @@ namespace WinFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             var password = DateTime.Now.ToString("MMdd");
-            if(this.PopUpDialog($"请确认是否清空所有数据，清空后无法恢复！\n请输入清空密码:{password}"))
+            if (this.PopUpDialog($"请确认是否清空所有数据，清空后无法恢复！\n请输入清空密码:{password}"))
             {
                 var res = this.SetCustomizeForms(new CustomizeFormsExtentions.CustomizeFormInput
                 {

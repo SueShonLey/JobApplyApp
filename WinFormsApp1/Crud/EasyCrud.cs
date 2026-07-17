@@ -1,4 +1,5 @@
 ﻿using FreeSql;
+using SQLitePCL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,19 +36,22 @@ namespace WinFormsApp1.Crud
                 }
                 else if (type == DataType.Sqlite)
                 {
-                    //string db = "base.db";
-                    //conn = string.Format(defualtDB_SQLite, db);
-                    //// 检查数据库文件是否存在，如果不存在，则创建一个空的数据库文件
-                    //if (!File.Exists(db))
-                    //{
-                    //    // 创建一个空的 SQLite 数据库文件
-                    //    SQLiteConnection.CreateFile(db);
-                    //    SetTips($"数据库文件 '{db}' 不存在，已创建。");
-                    //}
-                    //else
-                    //{
-                    //    SetTips($"数据库文件 '{db}' 已存在。");
-                    //}
+                    string db = "base.db";
+                    conn = string.Format(defualtDB_SQLite, db);
+                    // 检查数据库文件是否存在，如果不存在，则创建一个空的数据库文件
+                    if (!File.Exists(db))
+                    {
+                        // 创建一个空的 SQLite 数据库文件
+                        //System.Data.SQLite.SQLiteConnection.CreateFile(db);
+
+                        Batteries.Init();
+
+                        SetTips($"数据库文件 '{db}' 不存在，已创建。");
+                    }
+                    else
+                    {
+                        SetTips($"数据库文件 '{db}' 已存在。");
+                    }
                 }
                 else
                 {

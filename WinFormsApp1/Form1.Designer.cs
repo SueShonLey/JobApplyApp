@@ -102,10 +102,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("微软雅黑", 15F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label1.Location = new Point(32, 594);
+            label1.Font = new Font("微软雅黑", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label1.Location = new Point(17, 603);
             label1.Name = "label1";
-            label1.Size = new Size(90, 33);
+            label1.Size = new Size(65, 25);
             label1.TabIndex = 2;
             label1.Text = "label1";
             // 
@@ -255,7 +255,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "应聘通分析平台";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
