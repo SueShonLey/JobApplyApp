@@ -258,6 +258,7 @@ namespace WinFormsApp1
             var passedCount = sourcelist.Count(x => x.Status == 1);
             var rejectedCount = sourcelist.Count(x => x.Status == 0);
             var evaluatingCount = sourcelist.Count(x => x.Status == null);
+            var todayCount = sourcelist.Count(x => x.FirstTime.Value.Date == DateTime.Now.Date);
 
             label2.Text = @$"国企：{stateownedenterpriseCount}
 
@@ -269,7 +270,11 @@ namespace WinFormsApp1
 
 拒绝：{rejectedCount}
 
-未有结果：{evaluatingCount}";
+未有结果：{evaluatingCount}
+
+今日投递：{todayCount}
+
+当前总数：{sourcelist.Count}";
         }
 
         private string GetCompanyStatus(int? status)

@@ -83,11 +83,12 @@
             label2.AutoSize = true;
             label2.Font = new Font("宋体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             label2.ForeColor = Color.Blue;
-            label2.Location = new Point(67, 381);
+            label2.Location = new Point(66, 339);
             label2.Name = "label2";
-            label2.Size = new Size(55, 180);
+            label2.Size = new Size(96, 255);
             label2.TabIndex = 4;
-            label2.Text = "国企：\r\n\r\n私企：\r\n\r\n外企：\r\n\r\n通过：\r\n\r\n拒绝：\r\n\r\n评估：\r\n\r\n";
+            label2.Text = "国企：0\r\n\r\n私企：0\r\n\r\n外企：0\r\n\r\n通过：0\r\n\r\n拒绝：0\r\n\r\n评估：0\r\n\r\n未有结果：0\r\n\r\n未有结果：0\r\n\r\n未有结果：0";
+            label2.TextAlign = ContentAlignment.TopCenter;
             // 
             // button4
             // 
@@ -103,7 +104,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("微软雅黑", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label1.Location = new Point(17, 603);
+            label1.Location = new Point(17, 618);
             label1.Name = "label1";
             label1.Size = new Size(65, 25);
             label1.TabIndex = 2;
