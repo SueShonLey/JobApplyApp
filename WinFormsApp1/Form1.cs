@@ -41,6 +41,25 @@ namespace WinFormsApp1
             TimerExtentions.RegisterTimer("TimeNow", 1000, () =>
             {
                 label1.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                //黄金时间档
+                var nowWeek = DateTime.Now.DayOfWeek;
+                if (!new List<DayOfWeek> { DayOfWeek.Monday, DayOfWeek.Sunday, DayOfWeek.Saturday }.Contains(nowWeek))
+                {
+                    bool b1 = DateTime.Now.TimeOfDay >= new TimeSpan(10, 0, 0) && DateTime.Now.TimeOfDay <= new TimeSpan(11, 0, 0);
+                    bool b2 = DateTime.Now.TimeOfDay >= new TimeSpan(14, 0, 0) && DateTime.Now.TimeOfDay <= new TimeSpan(15, 30, 0) && nowWeek != DayOfWeek.Friday;
+                    if (b1 || b2)
+                    {
+                        // 黄金时间档逻辑
+                        label6.Text = "黄金时间档";
+                        label6.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        label6.Text = "普通时间档";
+                        label6.ForeColor = Color.DarkGray;
+                    }
+                }
             }, true);
         }
 
@@ -462,6 +481,33 @@ namespace WinFormsApp1
                 }
             }
 
+        }
+
+        /// <summary>
+        /// 黄金时间档
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.PopUpTips("以下时间为黄金时间档:\n" +
+                "1.周二-周五 上午10:00-11:00\n" +
+                "2.周二-周四 下午14:00-15:30");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.OpenLink("https://www.tianyancha.com");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel2.OpenLink("https://wenshu.court.gov.cn");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel3.OpenLink("https://zxgk.court.gov.cn");
         }
     }
 }

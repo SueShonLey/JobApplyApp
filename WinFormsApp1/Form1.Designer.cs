@@ -30,12 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             groupBox1 = new GroupBox();
+            label6 = new Label();
             button2 = new Button();
             label2 = new Label();
             button4 = new Button();
             label1 = new Label();
             button1 = new Button();
             groupBox2 = new GroupBox();
+            linkLabel3 = new LinkLabel();
+            linkLabel2 = new LinkLabel();
+            linkLabel1 = new LinkLabel();
+            label7 = new Label();
             checkBox2 = new CheckBox();
             button3 = new Button();
             dataGridView1 = new DataGridView();
@@ -54,6 +59,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(button4);
@@ -68,9 +74,21 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "工具栏";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("宋体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label6.ForeColor = Color.Red;
+            label6.Location = new Point(62, 579);
+            label6.Name = "label6";
+            label6.Size = new Size(87, 15);
+            label6.TabIndex = 6;
+            label6.Text = "黄金时间档";
+            label6.Click += label6_Click;
+            // 
             // button2
             // 
-            button2.Location = new Point(23, 260);
+            button2.Location = new Point(23, 213);
             button2.Name = "button2";
             button2.Size = new Size(176, 56);
             button2.TabIndex = 5;
@@ -83,7 +101,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("宋体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             label2.ForeColor = Color.Blue;
-            label2.Location = new Point(66, 339);
+            label2.Location = new Point(62, 294);
             label2.Name = "label2";
             label2.Size = new Size(96, 255);
             label2.TabIndex = 4;
@@ -92,7 +110,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(23, 150);
+            button4.Location = new Point(23, 127);
             button4.Name = "button4";
             button4.Size = new Size(176, 56);
             button4.TabIndex = 3;
@@ -103,10 +121,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("微软雅黑", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label1.Location = new Point(17, 618);
+            label1.Font = new Font("宋体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label1.Location = new Point(23, 623);
             label1.Name = "label1";
-            label1.Size = new Size(65, 25);
+            label1.Size = new Size(61, 15);
             label1.TabIndex = 2;
             label1.Text = "label1";
             // 
@@ -123,6 +141,10 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.Transparent;
+            groupBox2.Controls.Add(linkLabel3);
+            groupBox2.Controls.Add(linkLabel2);
+            groupBox2.Controls.Add(linkLabel1);
+            groupBox2.Controls.Add(label7);
             groupBox2.Controls.Add(checkBox2);
             groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(dataGridView1);
@@ -141,6 +163,48 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "信息栏";
+            // 
+            // linkLabel3
+            // 
+            linkLabel3.AutoSize = true;
+            linkLabel3.Location = new Point(332, 76);
+            linkLabel3.Name = "linkLabel3";
+            linkLabel3.Size = new Size(172, 15);
+            linkLabel3.TabIndex = 13;
+            linkLabel3.TabStop = true;
+            linkLabel3.Text = "全国法院执行信息公开网";
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
+            // 
+            // linkLabel2
+            // 
+            linkLabel2.AutoSize = true;
+            linkLabel2.Location = new Point(150, 76);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(173, 15);
+            linkLabel2.TabIndex = 12;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "中国裁判文书网(需登录)";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(90, 76);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(52, 15);
+            linkLabel1.TabIndex = 11;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "天眼查";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(6, 76);
+            label7.Name = "label7";
+            label7.Size = new Size(82, 15);
+            label7.TabIndex = 10;
+            label7.Text = "便捷背调：";
             // 
             // checkBox2
             // 
@@ -285,5 +349,10 @@
         private CheckBox checkBox2;
         private Label label2;
         private Button button2;
+        private Label label6;
+        private LinkLabel linkLabel1;
+        private Label label7;
+        private LinkLabel linkLabel2;
+        private LinkLabel linkLabel3;
     }
 }
