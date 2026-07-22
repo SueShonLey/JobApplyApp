@@ -49,6 +49,7 @@
             richTextBox1 = new RichTextBox();
             button1 = new Button();
             button2 = new Button();
+            checkBox1 = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
@@ -193,7 +194,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(615, 596);
+            button1.Location = new Point(592, 595);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
@@ -203,13 +204,26 @@
             // 
             // button2
             // 
-            button2.Location = new Point(841, 592);
+            button2.Location = new Point(793, 595);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 18;
             button2.Text = "保存信息";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.BackColor = Color.Transparent;
+            checkBox1.Checked = true;
+            checkBox1.CheckState = CheckState.Checked;
+            checkBox1.Location = new Point(941, 602);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(134, 19);
+            checkBox1.TabIndex = 19;
+            checkBox1.Text = "保存后关闭窗体";
+            checkBox1.UseVisualStyleBackColor = false;
             // 
             // EditForm
             // 
@@ -218,6 +232,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1112, 647);
+            Controls.Add(checkBox1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(richTextBox1);
@@ -273,5 +288,6 @@
         private RichTextBox richTextBox1;
         private Button button1;
         private Button button2;
+        private CheckBox checkBox1;
     }
 }

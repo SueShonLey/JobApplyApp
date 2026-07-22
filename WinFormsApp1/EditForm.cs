@@ -148,8 +148,11 @@ namespace WinFormsApp1
                 this.PopUpTips("更新失败，请重试！");
             }
 
-            this.Close();
-            _queryInfos();
+            if (checkBox1.Checked)
+            {
+                this.Close();
+                _queryInfos();
+            }
         }
 
         private int? QueryStatusAdd(int selectedIndex)
