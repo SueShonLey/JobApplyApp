@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 using WinformLib;
 using WinFormsApp1.Crud;
 using WinFormsApp1.Enums;
@@ -119,7 +120,8 @@ namespace WinFormsApp1
                     {
                         Label ="公司类型",
                         FormControlType =  CustomizeFormsExtentions.FormControlType.DropDown,
-                        Value = types
+                        Value = types,
+                        DefaultValue = types[1]
                     },
                     new CustomizeFormsExtentions.CustomizeValueInput
                     {
@@ -230,13 +232,13 @@ namespace WinFormsApp1
                 ButtonList = new List<string> { "编辑", "删除", "拒绝", "推进流程" },
                 headtextList = new List<(System.Linq.Expressions.Expression<Func<CompanyDetailsDto, object>> fields, string name, int width)>
                  {
-                      (x => x.CompanyName, "公司名称", 150),
+                      (x => x.CompanyName, "公司名称", 200),
                       (x => x.Stage, "投递阶段", 100),
                       (x => x.Status, "状态", 100),
-                      (x => x.Salary, "薪资", 100),
-                      (x => x.ExpectedValue, "期望值", 150),
+                      (x => x.Salary, "薪资", 80),
+                      (x => x.ExpectedValue, "期望值", 70),
                       (x => x.Position, "岗位", 150),
-                      (x => x.CompanyType, "公司类型", 100),
+                      (x => x.CompanyType, "公司类型", 90),
                       (x => x.LatestTime, "最新反馈时间", 150),
                  },
                 DataList = destictlist,
@@ -269,6 +271,14 @@ namespace WinFormsApp1
                     }
                 }
             });
+
+            foreach (DataGridViewColumn item in dataGridView1.Columns)
+            {
+                if (item.HeaderText.Equals("操作"))
+                {
+                    item.Width = 80;
+                }
+            }
 
             //统计
             var stateownedenterpriseCount = sourcelist.Count(x => x.CompanyType == EnumCompanyType.StateownedEnterprise.GetHashCode());
@@ -507,7 +517,7 @@ namespace WinFormsApp1
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            linkLabel3.OpenLink("https://zxgk.court.gov.cn");
+            linkLabel3.OpenLink("https://zxgk.court.gov.cn/zhzxgk/");
         }
     }
 }

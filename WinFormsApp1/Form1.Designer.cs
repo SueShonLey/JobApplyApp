@@ -79,7 +79,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("宋体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             label6.ForeColor = Color.Red;
-            label6.Location = new Point(62, 579);
+            label6.Location = new Point(64, 579);
             label6.Name = "label6";
             label6.Size = new Size(87, 15);
             label6.TabIndex = 6;
@@ -101,7 +101,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("宋体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             label2.ForeColor = Color.Blue;
-            label2.Location = new Point(62, 294);
+            label2.Location = new Point(62, 299);
             label2.Name = "label2";
             label2.Size = new Size(96, 255);
             label2.TabIndex = 4;
