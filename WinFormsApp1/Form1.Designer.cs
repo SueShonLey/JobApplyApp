@@ -37,6 +37,11 @@
             label1 = new Label();
             button1 = new Button();
             groupBox2 = new GroupBox();
+            linkLabel7 = new LinkLabel();
+            linkLabel6 = new LinkLabel();
+            linkLabel5 = new LinkLabel();
+            linkLabel4 = new LinkLabel();
+            label8 = new Label();
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             linkLabel1 = new LinkLabel();
@@ -141,6 +146,11 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.Transparent;
+            groupBox2.Controls.Add(linkLabel7);
+            groupBox2.Controls.Add(linkLabel6);
+            groupBox2.Controls.Add(linkLabel5);
+            groupBox2.Controls.Add(linkLabel4);
+            groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(linkLabel3);
             groupBox2.Controls.Add(linkLabel2);
             groupBox2.Controls.Add(linkLabel1);
@@ -163,6 +173,59 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "信息栏";
+            // 
+            // linkLabel7
+            // 
+            linkLabel7.AutoSize = true;
+            linkLabel7.Location = new Point(775, 75);
+            linkLabel7.Name = "linkLabel7";
+            linkLabel7.Size = new Size(67, 15);
+            linkLabel7.TabIndex = 18;
+            linkLabel7.TabStop = true;
+            linkLabel7.Text = "前程无忧";
+            linkLabel7.LinkClicked += linkLabel7_LinkClicked;
+            // 
+            // linkLabel6
+            // 
+            linkLabel6.AutoSize = true;
+            linkLabel6.Location = new Point(732, 75);
+            linkLabel6.Name = "linkLabel6";
+            linkLabel6.Size = new Size(37, 15);
+            linkLabel6.TabIndex = 17;
+            linkLabel6.TabStop = true;
+            linkLabel6.Text = "猎聘";
+            linkLabel6.LinkClicked += linkLabel6_LinkClicked;
+            // 
+            // linkLabel5
+            // 
+            linkLabel5.AutoSize = true;
+            linkLabel5.Location = new Point(659, 75);
+            linkLabel5.Name = "linkLabel5";
+            linkLabel5.Size = new Size(67, 15);
+            linkLabel5.TabIndex = 16;
+            linkLabel5.TabStop = true;
+            linkLabel5.Text = "智联招聘";
+            linkLabel5.LinkClicked += linkLabel5_LinkClicked;
+            // 
+            // linkLabel4
+            // 
+            linkLabel4.AutoSize = true;
+            linkLabel4.Location = new Point(587, 75);
+            linkLabel4.Name = "linkLabel4";
+            linkLabel4.Size = new Size(67, 15);
+            linkLabel4.TabIndex = 15;
+            linkLabel4.TabStop = true;
+            linkLabel4.Text = "高德地图";
+            linkLabel4.LinkClicked += linkLabel4_LinkClicked;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(510, 76);
+            label8.Name = "label8";
+            label8.Size = new Size(82, 15);
+            label8.TabIndex = 14;
+            label8.Text = "快速访问：";
             // 
             // linkLabel3
             // 
@@ -354,5 +417,10 @@
         private Label label7;
         private LinkLabel linkLabel2;
         private LinkLabel linkLabel3;
+        private LinkLabel linkLabel7;
+        private LinkLabel linkLabel6;
+        private LinkLabel linkLabel5;
+        private LinkLabel linkLabel4;
+        private Label label8;
     }
 }

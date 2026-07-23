@@ -519,5 +519,25 @@ namespace WinFormsApp1
         {
             linkLabel3.OpenLink("https://zxgk.court.gov.cn/zhzxgk/");
         }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel4.OpenLink("https://ditu.amap.com/ssr/search");
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel5.OpenLink("https://www.zhaopin.com/");
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel6.OpenLink("https://www.liepin.com/");
+        }
+
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel7.OpenLink("https://www.51job.com/");
+        }
     }
 }
