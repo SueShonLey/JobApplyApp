@@ -39,6 +39,8 @@ namespace WinFormsApp1
             QueryInfos();
 
             //开始时间记录
+            label6.Text = "普通时间档";
+            label6.ForeColor = Color.DarkGray;
             TimerExtentions.RegisterTimer("TimeNow", 1000, () =>
             {
                 label1.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -538,6 +540,11 @@ namespace WinFormsApp1
         private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel7.OpenLink("https://www.51job.com/");
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel8.OpenLink("https://zhiq.zhaopin.com/gongsidianping/0-0-");
         }
     }
 }

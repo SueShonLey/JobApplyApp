@@ -56,6 +56,7 @@
             label3 = new Label();
             comboBox1 = new ComboBox();
             checkBox1 = new CheckBox();
+            linkLabel8 = new LinkLabel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -146,6 +147,7 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.Transparent;
+            groupBox2.Controls.Add(linkLabel8);
             groupBox2.Controls.Add(linkLabel7);
             groupBox2.Controls.Add(linkLabel6);
             groupBox2.Controls.Add(linkLabel5);
@@ -369,6 +371,17 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += comboBox2_SelectedIndexChanged;
             // 
+            // linkLabel8
+            // 
+            linkLabel8.AutoSize = true;
+            linkLabel8.Location = new Point(841, 75);
+            linkLabel8.Name = "linkLabel8";
+            linkLabel8.Size = new Size(30, 15);
+            linkLabel8.TabIndex = 19;
+            linkLabel8.TabStop = true;
+            linkLabel8.Text = "职Q";
+            linkLabel8.LinkClicked += linkLabel8_LinkClicked;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 15F);
@@ -422,5 +435,6 @@
         private LinkLabel linkLabel5;
         private LinkLabel linkLabel4;
         private Label label8;
+        private LinkLabel linkLabel8;
     }
 }
