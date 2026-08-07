@@ -339,7 +339,7 @@ namespace WinFormsApp1
             var push = dataGridView1.GetCommonByButton<CompanyDetailsDto>("推进流程", e);
             var edit = dataGridView1.GetCommonByButton<CompanyDetailsDto>("编辑", e);
 
-            if (delete != null)
+            if (delete != null && this.PopUpDialog($"您确定要删除【{delete.CompanyName}】吗？"))
             {
                 var flag = easyCrud.DeleteByExp<CompanyDetails>(x => x.ID == delete.ID);
                 if (flag)

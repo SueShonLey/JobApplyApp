@@ -37,6 +37,7 @@
             label1 = new Label();
             button1 = new Button();
             groupBox2 = new GroupBox();
+            linkLabel8 = new LinkLabel();
             linkLabel7 = new LinkLabel();
             linkLabel6 = new LinkLabel();
             linkLabel5 = new LinkLabel();
@@ -56,7 +57,6 @@
             label3 = new Label();
             comboBox1 = new ComboBox();
             checkBox1 = new CheckBox();
-            linkLabel8 = new LinkLabel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -175,6 +175,17 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "信息栏";
+            // 
+            // linkLabel8
+            // 
+            linkLabel8.AutoSize = true;
+            linkLabel8.Location = new Point(841, 75);
+            linkLabel8.Name = "linkLabel8";
+            linkLabel8.Size = new Size(30, 15);
+            linkLabel8.TabIndex = 19;
+            linkLabel8.TabStop = true;
+            linkLabel8.Text = "职Q";
+            linkLabel8.LinkClicked += linkLabel8_LinkClicked;
             // 
             // linkLabel7
             // 
@@ -310,6 +321,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(157, 25);
             textBox1.TabIndex = 7;
+            textBox1.TextChanged += comboBox2_SelectedIndexChanged;
             // 
             // label5
             // 
@@ -370,17 +382,6 @@
             checkBox1.Text = "最新7天内有反馈";
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += comboBox2_SelectedIndexChanged;
-            // 
-            // linkLabel8
-            // 
-            linkLabel8.AutoSize = true;
-            linkLabel8.Location = new Point(841, 75);
-            linkLabel8.Name = "linkLabel8";
-            linkLabel8.Size = new Size(30, 15);
-            linkLabel8.TabIndex = 19;
-            linkLabel8.TabStop = true;
-            linkLabel8.Text = "职Q";
-            linkLabel8.LinkClicked += linkLabel8_LinkClicked;
             // 
             // Form1
             // 

@@ -141,6 +141,10 @@ namespace WinFormsApp1
                 //  如果阶段发生了变化，则更新阶段
                 newEntity.LatestTime = DateTime.Now;
             }
+            if (newEntity.Status != null)
+            {
+                newEntity.Stage = EnumStage.ResultsAlreadyAvailable.GetHashCode();
+            }
             var flag = easyCrud.Update(newEntity);
 
             if (!flag)
