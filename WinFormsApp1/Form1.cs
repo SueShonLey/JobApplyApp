@@ -561,7 +561,7 @@ namespace WinFormsApp1
                 }
             });
 
-            if (dict != null)
+            if (dict.Count!=0)
             {
                 var CompanyName = dict["公司完整名称"];
                 List<string> data = new List<string> { "https://zhiq.zhaopin.com/gongsidianping/0-0-@", "https://www.baidu.com/s?wd=@怎么样", "https://www.tianyancha.com/search?key=@", "https://www.zhihu.com/search?type=content&q=@怎么样", "https://www.xiaohongshu.com/search_result_ai?keyword=@怎么样" };
