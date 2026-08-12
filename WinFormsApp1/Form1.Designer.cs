@@ -57,6 +57,7 @@
             label3 = new Label();
             comboBox1 = new ComboBox();
             checkBox1 = new CheckBox();
+            linkLabel9 = new LinkLabel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -147,6 +148,7 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.Transparent;
+            groupBox2.Controls.Add(linkLabel9);
             groupBox2.Controls.Add(linkLabel8);
             groupBox2.Controls.Add(linkLabel7);
             groupBox2.Controls.Add(linkLabel6);
@@ -179,7 +181,7 @@
             // linkLabel8
             // 
             linkLabel8.AutoSize = true;
-            linkLabel8.Location = new Point(841, 75);
+            linkLabel8.Location = new Point(882, 75);
             linkLabel8.Name = "linkLabel8";
             linkLabel8.Size = new Size(30, 15);
             linkLabel8.TabIndex = 19;
@@ -190,7 +192,7 @@
             // linkLabel7
             // 
             linkLabel7.AutoSize = true;
-            linkLabel7.Location = new Point(775, 75);
+            linkLabel7.Location = new Point(816, 75);
             linkLabel7.Name = "linkLabel7";
             linkLabel7.Size = new Size(67, 15);
             linkLabel7.TabIndex = 18;
@@ -201,7 +203,7 @@
             // linkLabel6
             // 
             linkLabel6.AutoSize = true;
-            linkLabel6.Location = new Point(732, 75);
+            linkLabel6.Location = new Point(773, 75);
             linkLabel6.Name = "linkLabel6";
             linkLabel6.Size = new Size(37, 15);
             linkLabel6.TabIndex = 17;
@@ -212,29 +214,29 @@
             // linkLabel5
             // 
             linkLabel5.AutoSize = true;
-            linkLabel5.Location = new Point(659, 75);
+            linkLabel5.Location = new Point(738, 75);
             linkLabel5.Name = "linkLabel5";
-            linkLabel5.Size = new Size(67, 15);
+            linkLabel5.Size = new Size(37, 15);
             linkLabel5.TabIndex = 16;
             linkLabel5.TabStop = true;
-            linkLabel5.Text = "智联招聘";
+            linkLabel5.Text = "智联";
             linkLabel5.LinkClicked += linkLabel5_LinkClicked;
             // 
             // linkLabel4
             // 
             linkLabel4.AutoSize = true;
-            linkLabel4.Location = new Point(587, 75);
+            linkLabel4.Location = new Point(702, 75);
             linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(67, 15);
+            linkLabel4.Size = new Size(37, 15);
             linkLabel4.TabIndex = 15;
             linkLabel4.TabStop = true;
-            linkLabel4.Text = "高德地图";
+            linkLabel4.Text = "高德";
             linkLabel4.LinkClicked += linkLabel4_LinkClicked;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(510, 76);
+            label8.Location = new Point(620, 75);
             label8.Name = "label8";
             label8.Size = new Size(82, 15);
             label8.TabIndex = 14;
@@ -383,6 +385,19 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += comboBox2_SelectedIndexChanged;
             // 
+            // linkLabel9
+            // 
+            linkLabel9.AutoSize = true;
+            linkLabel9.ForeColor = Color.FromArgb(255, 128, 0);
+            linkLabel9.LinkColor = Color.Red;
+            linkLabel9.Location = new Point(510, 76);
+            linkLabel9.Name = "linkLabel9";
+            linkLabel9.Size = new Size(67, 15);
+            linkLabel9.TabIndex = 20;
+            linkLabel9.TabStop = true;
+            linkLabel9.Text = "快速背调";
+            linkLabel9.LinkClicked += linkLabel9_LinkClicked;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 15F);
@@ -437,5 +452,6 @@
         private LinkLabel linkLabel4;
         private Label label8;
         private LinkLabel linkLabel8;
+        private LinkLabel linkLabel9;
     }
 }

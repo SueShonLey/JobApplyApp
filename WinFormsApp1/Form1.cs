@@ -546,5 +546,30 @@ namespace WinFormsApp1
         {
             linkLabel8.OpenLink("https://zhiq.zhaopin.com/gongsidianping/0-0-");
         }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var dict = this.SetCustomizeForms(new CustomizeFormsExtentions.CustomizeFormInput
+            {
+                FormTitle ="一键背调",
+                inputs = new List<CustomizeFormsExtentions.CustomizeValueInput>
+                {
+                    new CustomizeFormsExtentions.CustomizeValueInput
+                    {
+                        Label = "公司完整名称"
+                    }
+                }
+            });
+
+            if (dict != null)
+            {
+                var CompanyName = dict["公司完整名称"];
+                List<string> data = new List<string> { "https://zhiq.zhaopin.com/gongsidianping/0-0-@", "https://www.baidu.com/s?wd=@怎么样", "https://www.tianyancha.com/search?key=@", "https://www.zhihu.com/search?type=content&q=@怎么样", "https://www.xiaohongshu.com/search_result_ai?keyword=@怎么样" };
+                foreach (var item in data)
+                {
+                    linkLabel9.OpenLink(item.Replace("@",CompanyName));
+                }
+            }
+        }
     }
 }
