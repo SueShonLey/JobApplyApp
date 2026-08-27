@@ -27,7 +27,18 @@ namespace WinFormsApp1.Crud
     Remark TEXT NULL,
     CreateTime TEXT NULL,
     UpdateTime TEXT NULL
-);";
+);
+
+CREATE TABLE IF NOT EXISTS BlackListInfo (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name TEXT NOT NULL,
+    AvoidCount INTEGER DEFAULT 0,
+    AvoidReason TEXT,
+    RelatedLink TEXT,
+    Remark TEXT
+);
+
+";
 
 
         // 使用 Lazy<T> 来保证延迟初始化和线程安全

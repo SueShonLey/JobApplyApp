@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             groupBox1 = new GroupBox();
+            button5 = new Button();
             label6 = new Label();
             button2 = new Button();
             label2 = new Label();
@@ -66,6 +67,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(label2);
@@ -81,12 +83,22 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "工具栏";
             // 
+            // button5
+            // 
+            button5.Location = new Point(23, 187);
+            button5.Name = "button5";
+            button5.Size = new Size(176, 45);
+            button5.TabIndex = 7;
+            button5.Text = "黑名单维护";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("宋体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             label6.ForeColor = Color.Red;
-            label6.Location = new Point(64, 579);
+            label6.Location = new Point(64, 594);
             label6.Name = "label6";
             label6.Size = new Size(87, 15);
             label6.TabIndex = 6;
@@ -95,9 +107,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(23, 213);
+            button2.Location = new Point(23, 258);
             button2.Name = "button2";
-            button2.Size = new Size(176, 56);
+            button2.Size = new Size(176, 45);
             button2.TabIndex = 5;
             button2.Text = "信息清空";
             button2.UseVisualStyleBackColor = true;
@@ -108,7 +120,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("宋体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             label2.ForeColor = Color.Blue;
-            label2.Location = new Point(62, 299);
+            label2.Location = new Point(62, 341);
             label2.Name = "label2";
             label2.Size = new Size(96, 255);
             label2.TabIndex = 4;
@@ -117,9 +129,9 @@
             // 
             // button4
             // 
-            button4.Location = new Point(23, 127);
+            button4.Location = new Point(23, 117);
             button4.Name = "button4";
-            button4.Size = new Size(176, 56);
+            button4.Size = new Size(176, 45);
             button4.TabIndex = 3;
             button4.Text = "渠道维护";
             button4.UseVisualStyleBackColor = true;
@@ -139,7 +151,7 @@
             // 
             button1.Location = new Point(23, 37);
             button1.Name = "button1";
-            button1.Size = new Size(176, 56);
+            button1.Size = new Size(176, 53);
             button1.TabIndex = 0;
             button1.Text = "新增公司";
             button1.UseVisualStyleBackColor = true;
@@ -453,5 +465,6 @@
         private Label label8;
         private LinkLabel linkLabel8;
         private LinkLabel linkLabel9;
+        private Button button5;
     }
 }
