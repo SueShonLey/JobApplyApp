@@ -352,7 +352,7 @@ namespace WinFormsApp1
                 }
             }
 
-            if (reject != null)
+            if (reject != null && this.PopUpDialog($"您确定要拒绝【{reject.CompanyName}】吗？"))
             {
                 var id = reject.ID;
                 var flag = easyCrud.UpdateSetWhere<CompanyDetails>(x => x.Status, 0, x => x.ID == id);
@@ -382,7 +382,7 @@ namespace WinFormsApp1
                     this.PopUpTips("更新失败，该流程不能被推进，已有结果！");
                     return;
                 }
-                if (!this.PopUpDialog($"您确定要将流程从【{oldStageName}】推进到【{newStageName}】吗？"))
+                if (!this.PopUpDialog($"您确定要将【{push.CompanyName}】的流程从【{oldStageName}】推进到【{newStageName}】吗？"))
                 {
                     return;
                 }
