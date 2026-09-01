@@ -240,7 +240,7 @@ namespace WinFormsApp1
                       (x => x.Salary, "薪资", 80),
                       (x => x.ExpectedValue, "期望值", 70),
                       (x => x.Position, "岗位", 150),
-                      (x => x.CompanyType, "公司类型", 90),
+                      (x => x.Channel, "投递渠道", 90),
                       (x => x.LatestTime, "最新反馈时间", 150),
                  },
                 DataList = destictlist,
