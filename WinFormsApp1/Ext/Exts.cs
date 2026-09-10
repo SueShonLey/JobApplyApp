@@ -356,5 +356,51 @@ namespace WinFormsApp1.Ext
             g.Dispose();
             return Convert.ToInt32(size.Width);
         }
+
+
+        public static void SetCommonNew(this ComboBox comboBox, List<string> dataList, bool isSelectFirst = true, bool isLazyLoading = true, bool isSuggest = true)
+        {
+            ComboBox comboBox2 = comboBox;
+            List<string> dataList2 = dataList;
+            if (isLazyLoading)
+            {
+                Task.Run(delegate
+                {
+                    comboBox2.BeginInvoke(delegate
+                    {
+                        SetData(comboBox2, dataList2, isSelectFirst, isSuggest);
+                    });
+                });
+            }
+            else
+            {
+                SetData(comboBox2, dataList2, isSelectFirst, isSuggest);
+            }
+        }
+        private static void SetData(ComboBox comboBox, List<string> dataList, bool isSelectFirst, bool isSuggest)
+        {
+            // 如果没有启用延迟加载，直接在 UI 线程更新 ComboBox
+            comboBox.Items.Clear();
+            comboBox.Items.AddRange(dataList.ToArray());
+
+            // 设置自动完成功能（如果启用）
+            if (isSuggest)
+            {
+                comboBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
+                comboBox.DropDownStyle = ComboBoxStyle.DropDown;
+            }
+            else
+            {
+                comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+
+            // 设置默认选中第一个项（如果启用）
+            if (isSelectFirst && comboBox.Items.Count > 0)
+            {
+                comboBox.SelectedIndex = 0;  // 默认选中第一个项
+            }
+        }
+
     }
 }

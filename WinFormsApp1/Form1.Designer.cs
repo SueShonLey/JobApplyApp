@@ -38,12 +38,9 @@
             label1 = new Label();
             button1 = new Button();
             groupBox2 = new GroupBox();
+            button6 = new Button();
+            comboBox3 = new ComboBox();
             linkLabel9 = new LinkLabel();
-            linkLabel8 = new LinkLabel();
-            linkLabel7 = new LinkLabel();
-            linkLabel6 = new LinkLabel();
-            linkLabel5 = new LinkLabel();
-            linkLabel4 = new LinkLabel();
             label8 = new Label();
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
@@ -160,12 +157,9 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.Transparent;
+            groupBox2.Controls.Add(button6);
+            groupBox2.Controls.Add(comboBox3);
             groupBox2.Controls.Add(linkLabel9);
-            groupBox2.Controls.Add(linkLabel8);
-            groupBox2.Controls.Add(linkLabel7);
-            groupBox2.Controls.Add(linkLabel6);
-            groupBox2.Controls.Add(linkLabel5);
-            groupBox2.Controls.Add(linkLabel4);
             groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(linkLabel3);
             groupBox2.Controls.Add(linkLabel2);
@@ -190,12 +184,30 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "信息栏";
             // 
+            // button6
+            // 
+            button6.Location = new Point(800, 50);
+            button6.Name = "button6";
+            button6.Size = new Size(83, 29);
+            button6.TabIndex = 23;
+            button6.Text = "跳转";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(636, 55);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(158, 23);
+            comboBox3.TabIndex = 22;
+            // 
             // linkLabel9
             // 
             linkLabel9.AutoSize = true;
             linkLabel9.ForeColor = Color.FromArgb(255, 128, 0);
             linkLabel9.LinkColor = Color.Red;
-            linkLabel9.Location = new Point(512, 76);
+            linkLabel9.Location = new Point(483, 60);
             linkLabel9.Name = "linkLabel9";
             linkLabel9.Size = new Size(67, 15);
             linkLabel9.TabIndex = 20;
@@ -203,74 +215,19 @@
             linkLabel9.Text = "快速背调";
             linkLabel9.LinkClicked += linkLabel9_LinkClicked;
             // 
-            // linkLabel8
-            // 
-            linkLabel8.AutoSize = true;
-            linkLabel8.Location = new Point(879, 75);
-            linkLabel8.Name = "linkLabel8";
-            linkLabel8.Size = new Size(30, 15);
-            linkLabel8.TabIndex = 19;
-            linkLabel8.TabStop = true;
-            linkLabel8.Text = "职Q";
-            linkLabel8.LinkClicked += linkLabel8_LinkClicked;
-            // 
-            // linkLabel7
-            // 
-            linkLabel7.AutoSize = true;
-            linkLabel7.Location = new Point(806, 75);
-            linkLabel7.Name = "linkLabel7";
-            linkLabel7.Size = new Size(67, 15);
-            linkLabel7.TabIndex = 18;
-            linkLabel7.TabStop = true;
-            linkLabel7.Text = "前程无忧";
-            linkLabel7.LinkClicked += linkLabel7_LinkClicked;
-            // 
-            // linkLabel6
-            // 
-            linkLabel6.AutoSize = true;
-            linkLabel6.Location = new Point(763, 75);
-            linkLabel6.Name = "linkLabel6";
-            linkLabel6.Size = new Size(37, 15);
-            linkLabel6.TabIndex = 17;
-            linkLabel6.TabStop = true;
-            linkLabel6.Text = "猎聘";
-            linkLabel6.LinkClicked += linkLabel6_LinkClicked;
-            // 
-            // linkLabel5
-            // 
-            linkLabel5.AutoSize = true;
-            linkLabel5.Location = new Point(720, 75);
-            linkLabel5.Name = "linkLabel5";
-            linkLabel5.Size = new Size(37, 15);
-            linkLabel5.TabIndex = 16;
-            linkLabel5.TabStop = true;
-            linkLabel5.Text = "智联";
-            linkLabel5.LinkClicked += linkLabel5_LinkClicked;
-            // 
-            // linkLabel4
-            // 
-            linkLabel4.AutoSize = true;
-            linkLabel4.Location = new Point(677, 75);
-            linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(37, 15);
-            linkLabel4.TabIndex = 15;
-            linkLabel4.TabStop = true;
-            linkLabel4.Text = "高德";
-            linkLabel4.LinkClicked += linkLabel4_LinkClicked;
-            // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(603, 75);
+            label8.Location = new Point(556, 59);
             label8.Name = "label8";
             label8.Size = new Size(82, 15);
             label8.TabIndex = 14;
-            label8.Text = "快速访问：";
+            label8.Text = "链接直达：";
             // 
             // linkLabel3
             // 
             linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(332, 76);
+            linkLabel3.Location = new Point(308, 60);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(172, 15);
             linkLabel3.TabIndex = 13;
@@ -281,7 +238,7 @@
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(150, 76);
+            linkLabel2.Location = new Point(129, 60);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(173, 15);
             linkLabel2.TabIndex = 12;
@@ -292,7 +249,7 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(90, 76);
+            linkLabel1.Location = new Point(79, 60);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(52, 15);
             linkLabel1.TabIndex = 11;
@@ -303,7 +260,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(6, 76);
+            label7.Location = new Point(6, 61);
             label7.Name = "label7";
             label7.Size = new Size(82, 15);
             label7.TabIndex = 10;
@@ -314,7 +271,7 @@
             checkBox2.AutoSize = true;
             checkBox2.Checked = true;
             checkBox2.CheckState = CheckState.Checked;
-            checkBox2.Location = new Point(877, 39);
+            checkBox2.Location = new Point(877, 23);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(119, 19);
             checkBox2.TabIndex = 9;
@@ -324,9 +281,9 @@
             // 
             // button3
             // 
-            button3.Location = new Point(911, 64);
+            button3.Location = new Point(889, 49);
             button3.Name = "button3";
-            button3.Size = new Size(83, 29);
+            button3.Size = new Size(102, 30);
             button3.TabIndex = 2;
             button3.Text = "查询";
             button3.UseVisualStyleBackColor = true;
@@ -335,16 +292,16 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(11, 97);
+            dataGridView1.Location = new Point(11, 84);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(983, 541);
+            dataGridView1.Size = new Size(983, 554);
             dataGridView1.TabIndex = 8;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(61, 37);
+            textBox1.Location = new Point(61, 21);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(157, 25);
             textBox1.TabIndex = 7;
@@ -353,7 +310,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(6, 43);
+            label5.Location = new Point(6, 27);
             label5.Name = "label5";
             label5.Size = new Size(52, 15);
             label5.TabIndex = 6;
@@ -362,7 +319,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(476, 43);
+            label4.Location = new Point(476, 27);
             label4.Name = "label4";
             label4.Size = new Size(52, 15);
             label4.TabIndex = 5;
@@ -373,7 +330,7 @@
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "全部类型", "已投递", "评估中", "已面试", "已有结果" });
-            comboBox2.Location = new Point(531, 39);
+            comboBox2.Location = new Point(531, 23);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(142, 23);
             comboBox2.TabIndex = 4;
@@ -382,7 +339,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(235, 45);
+            label3.Location = new Point(235, 29);
             label3.Name = "label3";
             label3.Size = new Size(52, 15);
             label3.TabIndex = 3;
@@ -393,7 +350,7 @@
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "全部类型", "国企", "私企", "外企" });
-            comboBox1.Location = new Point(288, 39);
+            comboBox1.Location = new Point(288, 23);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(155, 23);
             comboBox1.TabIndex = 2;
@@ -402,7 +359,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(715, 39);
+            checkBox1.Location = new Point(715, 23);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(142, 19);
             checkBox1.TabIndex = 1;
@@ -458,13 +415,10 @@
         private Label label7;
         private LinkLabel linkLabel2;
         private LinkLabel linkLabel3;
-        private LinkLabel linkLabel7;
-        private LinkLabel linkLabel6;
-        private LinkLabel linkLabel5;
-        private LinkLabel linkLabel4;
         private Label label8;
-        private LinkLabel linkLabel8;
         private LinkLabel linkLabel9;
         private Button button5;
+        private ComboBox comboBox3;
+        private Button button6;
     }
 }

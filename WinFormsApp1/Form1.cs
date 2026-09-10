@@ -2,6 +2,7 @@ using System.Windows.Forms;
 using WinformLib;
 using WinFormsApp1.Crud;
 using WinFormsApp1.Enums;
+using WinFormsApp1.Ext;
 using WinFormsApp1.Model;
 using static WinFormsApp1.Enums.EnumHelper;
 
@@ -64,6 +65,10 @@ namespace WinFormsApp1
                     }
                 }
             }, true);
+
+
+            //跳转界面初始化
+            comboBox3.SetCommonNew(siteDict.Keys.ToList(),isSuggest:false);
         }
 
         /// <summary>
@@ -507,6 +512,22 @@ namespace WinFormsApp1
                 "2.周二-周四 下午14:00-15:30");
         }
 
+        /*
+         * 链接直达维护：
+         */
+        public Dictionary<string, string> siteDict = new Dictionary<string, string>
+        {
+            //{"天眼查", "https://www.tianyancha.com"},
+            //{"中国裁判文书网", "https://wenshu.court.gov.cn"},
+            //{"中国执行信息公开网", "https://zxgk.court.gov.cn/zhzxgk/"},
+            {"高德地图", "https://ditu.amap.com/ssr/search"},
+            {"智联招聘", "https://www.zhaopin.com/"},
+            {"猎聘", "https://www.liepin.com/"},
+            {"前程无忧51job", "https://www.51job.com/"},
+            {"智联企业点评", "https://zhiq.zhaopin.com/gongsidianping/0-0-"},
+            {"BOSS直聘", "https://www.zhipin.com/"}
+        };
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel1.OpenLink("https://www.tianyancha.com");
@@ -520,31 +541,6 @@ namespace WinFormsApp1
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel3.OpenLink("https://zxgk.court.gov.cn/zhzxgk/");
-        }
-
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            linkLabel4.OpenLink("https://ditu.amap.com/ssr/search");
-        }
-
-        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            linkLabel5.OpenLink("https://www.zhaopin.com/");
-        }
-
-        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            linkLabel6.OpenLink("https://www.liepin.com/");
-        }
-
-        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            linkLabel7.OpenLink("https://www.51job.com/");
-        }
-
-        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            linkLabel8.OpenLink("https://zhiq.zhaopin.com/gongsidianping/0-0-");
         }
 
         private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -577,12 +573,7 @@ namespace WinFormsApp1
                 {
                     linkLabel9.OpenLink(item.Replace("@", CompanyName));
                 }
-
-
             }
-
-
-
         }
 
         /// <summary>
@@ -593,6 +584,19 @@ namespace WinFormsApp1
         private void button5_Click(object sender, EventArgs e)
         {
             this.ShowOnlyOne<BlackListForm>();
+        }
+
+        /// <summary>
+        /// 跳转
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var index = comboBox3.SelectedIndex;
+            var selectKey = siteDict.ElementAt(index).Key;
+            var selectValue = siteDict.ElementAt(index).Value;
+            LinkLabel1Extensions.OpenLink(new LinkLabel(),selectValue);
         }
     }
 }
