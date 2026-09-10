@@ -281,9 +281,9 @@
             // 
             // button3
             // 
-            button3.Location = new Point(889, 49);
+            button3.Location = new Point(906, 49);
             button3.Name = "button3";
-            button3.Size = new Size(102, 30);
+            button3.Size = new Size(85, 30);
             button3.TabIndex = 2;
             button3.Text = "查询";
             button3.UseVisualStyleBackColor = true;
