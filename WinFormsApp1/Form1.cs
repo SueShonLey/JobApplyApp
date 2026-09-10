@@ -524,7 +524,7 @@ namespace WinFormsApp1
             {"智联招聘", "https://www.zhaopin.com/"},
             {"猎聘", "https://www.liepin.com/"},
             {"前程无忧51job", "https://www.51job.com/"},
-            {"智联企业点评", "https://zhiq.zhaopin.com/gongsidianping/0-0-"},
+            {"职Q", "https://zhiq.zhaopin.com/gongsidianping/0-0-"},
             {"BOSS直聘", "https://www.zhipin.com/"}
         };
 

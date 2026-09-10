@@ -186,9 +186,9 @@
             // 
             // button6
             // 
-            button6.Location = new Point(800, 50);
+            button6.Location = new Point(809, 50);
             button6.Name = "button6";
-            button6.Size = new Size(83, 29);
+            button6.Size = new Size(76, 29);
             button6.TabIndex = 23;
             button6.Text = "跳转";
             button6.UseVisualStyleBackColor = true;
