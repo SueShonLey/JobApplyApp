@@ -524,8 +524,11 @@ namespace WinFormsApp1
             {"智联招聘", "https://www.zhaopin.com/"},
             {"猎聘", "https://www.liepin.com/"},
             {"前程无忧51job", "https://www.51job.com/"},
+            {"BOSS直聘", "https://www.zhipin.com/"},
             {"职Q", "https://zhiq.zhaopin.com/gongsidianping/0-0-"},
-            {"BOSS直聘", "https://www.zhipin.com/"}
+            {"小红书","https://www.xiaohongshu.com/explore" },
+            {"知乎","https://www.zhihu.com/" }
+
         };
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
