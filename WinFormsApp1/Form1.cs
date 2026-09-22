@@ -447,7 +447,7 @@ namespace WinFormsApp1
 
             if (edit != null)
             {
-                EditForm form = new EditForm(edit, QueryInfos);
+                EditForm form = new EditForm(edit, QueryInfos,this.TopMost);
                 form.Show();
                 QueryInfos();
             }

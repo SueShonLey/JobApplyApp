@@ -22,11 +22,12 @@ namespace WinFormsApp1
         EasyCrud easyCrud = EasyCrudSingleton.Instance;
         Action _queryInfos = null;
         private ChromiumWebBrowser browser;
-        public EditForm(Model.CompanyDetailsDto edit, Action queryInfos)
+        public EditForm(Model.CompanyDetailsDto edit, Action queryInfos, bool topMost)
         {
             InitializeComponent();
             _edit = edit;
             _queryInfos = queryInfos;
+            TopMost = topMost;
         }
 
         private void EditForm_Load(object sender, EventArgs e)

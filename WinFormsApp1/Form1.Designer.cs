@@ -38,6 +38,7 @@
             label1 = new Label();
             button1 = new Button();
             groupBox2 = new GroupBox();
+            checkBox3 = new CheckBox();
             button6 = new Button();
             comboBox3 = new ComboBox();
             linkLabel9 = new LinkLabel();
@@ -56,7 +57,6 @@
             label3 = new Label();
             comboBox1 = new ComboBox();
             checkBox1 = new CheckBox();
-            checkBox3 = new CheckBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -172,11 +172,11 @@
             groupBox2.Controls.Add(dataGridView1);
             groupBox2.Controls.Add(textBox1);
             groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(comboBox2);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(comboBox1);
             groupBox2.Controls.Add(checkBox1);
+            groupBox2.Controls.Add(label4);
             groupBox2.Location = new Point(249, 11);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
@@ -185,6 +185,17 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "信息栏";
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(963, 24);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(59, 19);
+            checkBox3.TabIndex = 24;
+            checkBox3.Text = "置顶";
+            checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
             // 
             // button6
             // 
@@ -368,17 +379,6 @@
             checkBox1.Text = "最新7天内有反馈";
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += comboBox2_SelectedIndexChanged;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(963, 24);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(59, 19);
-            checkBox3.TabIndex = 24;
-            checkBox3.Text = "置顶";
-            checkBox3.UseVisualStyleBackColor = true;
-            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
             // 
             // Form1
             // 
