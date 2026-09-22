@@ -81,7 +81,7 @@ namespace WinFormsApp1
             var stages = enumStageList.Select(x => x.Description).ToList();
             var types = enumTypeList.Select(x => x.Description).ToList();
             List<string> channelList = File.ReadAllText(channelurl).Split(',').ToList();
-            var result = this.SetCustomizeForms(new CustomizeFormsExtentions.CustomizeFormInput
+            var result = this.SetCustomizeFormsNew(new CustomizeFormsExtentions.CustomizeFormInput
             {
                 FormTitle = "新增公司",
                 inputs = new List<CustomizeFormsExtentions.CustomizeValueInput>
