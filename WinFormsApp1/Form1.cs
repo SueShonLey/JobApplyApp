@@ -78,6 +78,7 @@ namespace WinFormsApp1
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
             var stages = enumStageList.Select(x => x.Description).ToList();
             var types = enumTypeList.Select(x => x.Description).ToList();
             List<string> channelList = File.ReadAllText(channelurl).Split(',').ToList();
