@@ -56,6 +56,7 @@
             label3 = new Label();
             comboBox1 = new ComboBox();
             checkBox1 = new CheckBox();
+            checkBox3 = new CheckBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -157,6 +158,7 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.Transparent;
+            groupBox2.Controls.Add(checkBox3);
             groupBox2.Controls.Add(button6);
             groupBox2.Controls.Add(comboBox3);
             groupBox2.Controls.Add(linkLabel9);
@@ -271,7 +273,7 @@
             checkBox2.AutoSize = true;
             checkBox2.Checked = true;
             checkBox2.CheckState = CheckState.Checked;
-            checkBox2.Location = new Point(914, 23);
+            checkBox2.Location = new Point(830, 25);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(119, 19);
             checkBox2.TabIndex = 9;
@@ -319,7 +321,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(486, 27);
+            label4.Location = new Point(467, 27);
             label4.Name = "label4";
             label4.Size = new Size(52, 15);
             label4.TabIndex = 5;
@@ -330,9 +332,9 @@
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "全部类型", "已投递", "评估中", "已面试", "已有结果" });
-            comboBox2.Location = new Point(539, 23);
+            comboBox2.Location = new Point(516, 23);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(186, 23);
+            comboBox2.Size = new Size(134, 23);
             comboBox2.TabIndex = 4;
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
@@ -359,13 +361,24 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(757, 25);
+            checkBox1.Location = new Point(678, 26);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(142, 19);
             checkBox1.TabIndex = 1;
             checkBox1.Text = "最新7天内有反馈";
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(963, 24);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(59, 19);
+            checkBox3.TabIndex = 24;
+            checkBox3.Text = "置顶";
+            checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
             // 
             // Form1
             // 
@@ -420,5 +433,6 @@
         private Button button5;
         private ComboBox comboBox3;
         private Button button6;
+        private CheckBox checkBox3;
     }
 }

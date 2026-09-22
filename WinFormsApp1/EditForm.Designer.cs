@@ -50,6 +50,8 @@
             button1 = new Button();
             button2 = new Button();
             checkBox1 = new CheckBox();
+            linkLabel1 = new LinkLabel();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
@@ -68,7 +70,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(484, 21);
+            label2.Location = new Point(410, 17);
             label2.Name = "label2";
             label2.Size = new Size(106, 30);
             label2.TabIndex = 1;
@@ -77,9 +79,9 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Location = new Point(484, 187);
+            panel1.Location = new Point(509, 151);
             panel1.Name = "panel1";
-            panel1.Size = new Size(616, 394);
+            panel1.Size = new Size(717, 430);
             panel1.TabIndex = 2;
             // 
             // textBox1
@@ -186,15 +188,15 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(592, 17);
+            richTextBox1.Location = new Point(509, 17);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(508, 148);
+            richTextBox1.Size = new Size(717, 114);
             richTextBox1.TabIndex = 17;
             richTextBox1.Text = "";
             // 
             // button1
             // 
-            button1.Location = new Point(592, 595);
+            button1.Location = new Point(725, 592);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
@@ -204,7 +206,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(793, 595);
+            button2.Location = new Point(925, 591);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 18;
@@ -218,12 +220,34 @@
             checkBox1.BackColor = Color.Transparent;
             checkBox1.Checked = true;
             checkBox1.CheckState = CheckState.Checked;
-            checkBox1.Location = new Point(941, 602);
+            checkBox1.Location = new Point(1092, 601);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(134, 19);
             checkBox1.TabIndex = 19;
             checkBox1.Text = "保存后关闭窗体";
             checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = Color.Transparent;
+            linkLabel1.Location = new Point(509, 599);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(67, 15);
+            linkLabel1.TabIndex = 20;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "跳转高德";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Location = new Point(410, 154);
+            label3.Name = "label3";
+            label3.Size = new Size(106, 15);
+            label3.TabIndex = 21;
+            label3.Text = "16.地图参考：";
             // 
             // EditForm
             // 
@@ -231,7 +255,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1112, 647);
+            ClientSize = new Size(1247, 647);
+            Controls.Add(linkLabel1);
             Controls.Add(checkBox1);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -253,6 +278,7 @@
             Controls.Add(panel1);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(label3);
             DoubleBuffered = true;
             Font = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -289,5 +315,7 @@
         private Button button1;
         private Button button2;
         private CheckBox checkBox1;
+        private LinkLabel linkLabel1;
+        private Label label3;
     }
 }

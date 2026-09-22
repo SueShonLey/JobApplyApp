@@ -68,7 +68,7 @@ namespace WinFormsApp1
 
 
             //跳转界面初始化
-            comboBox3.SetCommonNew(siteDict.Keys.ToList(),isSuggest:false);
+            comboBox3.SetCommonNew(siteDict.Keys.ToList(), isSuggest: false);
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace WinFormsApp1
             //  渲染表格
             dataGridView1.SetCommonWithUI(new DataGridViewExtentions.DataDisplayEntity<CompanyDetailsDto>
             {
-                ButtonList = new List<string> { "推进","编辑", "拒绝", "删除" },
+                ButtonList = new List<string> { "推进", "编辑", "拒绝", "删除" },
                 headtextList = new List<(System.Linq.Expressions.Expression<Func<CompanyDetailsDto, object>> fields, string name, int width)>
                  {
                       (x => x.CompanyName, "公司名称", 200),
@@ -604,7 +604,12 @@ namespace WinFormsApp1
             var index = comboBox3.SelectedIndex;
             var selectKey = siteDict.ElementAt(index).Key;
             var selectValue = siteDict.ElementAt(index).Value;
-            LinkLabel1Extensions.OpenLink(new LinkLabel(),selectValue);
+            LinkLabel1Extensions.OpenLink(new LinkLabel(), selectValue);
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            this.TopMost = checkBox3.Checked;
         }
     }
 }

@@ -64,6 +64,7 @@ namespace WinFormsApp1
             QueryAndShow();
         }
 
+        string currentUrl = string.Empty;
         private void QueryAndShow()
         {
             //查出它的实体
@@ -90,7 +91,7 @@ namespace WinFormsApp1
 
             //地图渲染
             var url = $"https://ditu.amap.com/ssr/search?query={entity.Address}";
-
+            currentUrl = url;
             browser = new ChromiumWebBrowser(url);
 
             panel1.Controls.Add(browser);//在容器中渲染
@@ -177,6 +178,11 @@ namespace WinFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             browser.Reload(true);//CTRL+F5
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.OpenLink(currentUrl);
         }
     }
 }

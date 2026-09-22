@@ -321,6 +321,7 @@ namespace WinFormsApp1.Ext
             //}
 
             // 显示窗体并等待用户操作
+            inputForm.TopMost = true;
             inputForm.ShowDialog();
 
             // 返回用户输入的结果
