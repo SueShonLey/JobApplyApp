@@ -179,16 +179,16 @@
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(1003, 654);
+            groupBox2.Size = new Size(1039, 654);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "信息栏";
             // 
             // button6
             // 
-            button6.Location = new Point(809, 50);
+            button6.Location = new Point(858, 51);
             button6.Name = "button6";
-            button6.Size = new Size(76, 29);
+            button6.Size = new Size(82, 29);
             button6.TabIndex = 23;
             button6.Text = "跳转";
             button6.UseVisualStyleBackColor = true;
@@ -197,7 +197,7 @@
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(636, 55);
+            comboBox3.Location = new Point(678, 55);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(158, 23);
             comboBox3.TabIndex = 22;
@@ -207,7 +207,7 @@
             linkLabel9.AutoSize = true;
             linkLabel9.ForeColor = Color.FromArgb(255, 128, 0);
             linkLabel9.LinkColor = Color.Red;
-            linkLabel9.Location = new Point(483, 60);
+            linkLabel9.Location = new Point(516, 60);
             linkLabel9.Name = "linkLabel9";
             linkLabel9.Size = new Size(67, 15);
             linkLabel9.TabIndex = 20;
@@ -218,7 +218,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(556, 59);
+            label8.Location = new Point(591, 60);
             label8.Name = "label8";
             label8.Size = new Size(82, 15);
             label8.TabIndex = 14;
@@ -227,7 +227,7 @@
             // linkLabel3
             // 
             linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(308, 60);
+            linkLabel3.Location = new Point(333, 60);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(172, 15);
             linkLabel3.TabIndex = 13;
@@ -238,7 +238,7 @@
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(129, 60);
+            linkLabel2.Location = new Point(150, 60);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(173, 15);
             linkLabel2.TabIndex = 12;
@@ -249,7 +249,7 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(79, 60);
+            linkLabel1.Location = new Point(87, 60);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(52, 15);
             linkLabel1.TabIndex = 11;
@@ -271,7 +271,7 @@
             checkBox2.AutoSize = true;
             checkBox2.Checked = true;
             checkBox2.CheckState = CheckState.Checked;
-            checkBox2.Location = new Point(877, 23);
+            checkBox2.Location = new Point(914, 23);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(119, 19);
             checkBox2.TabIndex = 9;
@@ -281,7 +281,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(906, 49);
+            button3.Location = new Point(948, 50);
             button3.Name = "button3";
             button3.Size = new Size(85, 30);
             button3.TabIndex = 2;
@@ -295,13 +295,13 @@
             dataGridView1.Location = new Point(11, 84);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(983, 554);
+            dataGridView1.Size = new Size(1022, 554);
             dataGridView1.TabIndex = 8;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(61, 21);
+            textBox1.Location = new Point(60, 21);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(157, 25);
             textBox1.TabIndex = 7;
@@ -319,7 +319,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(476, 27);
+            label4.Location = new Point(486, 27);
             label4.Name = "label4";
             label4.Size = new Size(52, 15);
             label4.TabIndex = 5;
@@ -330,9 +330,9 @@
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "全部类型", "已投递", "评估中", "已面试", "已有结果" });
-            comboBox2.Location = new Point(531, 23);
+            comboBox2.Location = new Point(539, 23);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(142, 23);
+            comboBox2.Size = new Size(186, 23);
             comboBox2.TabIndex = 4;
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
@@ -352,14 +352,14 @@
             comboBox1.Items.AddRange(new object[] { "全部类型", "国企", "私企", "外企" });
             comboBox1.Location = new Point(288, 23);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(155, 23);
+            comboBox1.Size = new Size(164, 23);
             comboBox1.TabIndex = 2;
             comboBox1.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(715, 23);
+            checkBox1.Location = new Point(757, 25);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(142, 19);
             checkBox1.TabIndex = 1;
@@ -373,7 +373,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1262, 676);
+            ClientSize = new Size(1294, 676);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             DoubleBuffered = true;

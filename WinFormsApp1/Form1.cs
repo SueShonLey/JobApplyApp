@@ -98,7 +98,7 @@ namespace WinFormsApp1
                     //},
                     new CustomizeFormsExtentions.CustomizeValueInput
                     {
-                        Label ="期望值",
+                        Label ="期望",
                         DefaultValue = "60"
                     },
                     new CustomizeFormsExtentions.CustomizeValueInput
@@ -146,9 +146,15 @@ namespace WinFormsApp1
             });
             if (result.Count != 0)//用户填写了内容
             {
-                if (!int.TryParse(result["期望值"] ?? "aa", out _) || !int.TryParse(result["薪资"] ?? "aa", out _))
+                if (!int.TryParse(result["期望"] ?? "aa", out _) || !int.TryParse(result["薪资"] ?? "aa", out _))
                 {
-                    this.PopUpTips("期望值或薪资必须为数字");
+                    this.PopUpTips("期望或薪资必须为数字");
+                    return;
+                }
+                var inputCompanyName = result["公司名称"];
+                if (easyCrud.Any<CompanyDetails>(x => x.CompanyName == inputCompanyName))
+                {
+                    this.PopUpTips("该公司已存在!请勿重复添加！");
                     return;
                 }
                 var entity = new CompanyDetails
@@ -158,7 +164,7 @@ namespace WinFormsApp1
                     Stage = EnumStage.Delivered.GetHashCode(),
                     FirstTime = DateTime.Now,
                     LatestTime = DateTime.Now,
-                    ExpectedValue = int.Parse(result["期望值"]),
+                    ExpectedValue = int.Parse(result["期望"]),
                     Salary = int.Parse(result["薪资"]),
                     HRName = result["HR姓名"],
                     Address = result["公司地址"],
@@ -236,14 +242,14 @@ namespace WinFormsApp1
             //  渲染表格
             dataGridView1.SetCommonWithUI(new DataGridViewExtentions.DataDisplayEntity<CompanyDetailsDto>
             {
-                ButtonList = new List<string> { "编辑", "删除", "拒绝", "推进流程" },
+                ButtonList = new List<string> { "推进","编辑", "拒绝", "删除" },
                 headtextList = new List<(System.Linq.Expressions.Expression<Func<CompanyDetailsDto, object>> fields, string name, int width)>
                  {
                       (x => x.CompanyName, "公司名称", 200),
                       (x => x.Stage, "投递阶段", 100),
                       (x => x.Status, "状态", 100),
                       (x => x.Salary, "薪资", 80),
-                      (x => x.ExpectedValue, "期望值", 70),
+                      (x => x.ExpectedValue, "期望", 50),
                       (x => x.Position, "岗位", 150),
                       (x => x.Channel, "投递渠道", 90),
                       (x => x.LatestTime, "最新反馈时间", 150),
@@ -341,9 +347,8 @@ namespace WinFormsApp1
         {
             var delete = dataGridView1.GetCommonByButton<CompanyDetailsDto>("删除", e);
             var reject = dataGridView1.GetCommonByButton<CompanyDetailsDto>("拒绝", e);
-            var push = dataGridView1.GetCommonByButton<CompanyDetailsDto>("推进流程", e);
-            var edit = dataGridView1.GetCommonByButton<CompanyDetailsDto>("编辑", e);
-
+            var push = dataGridView1.GetCommonByButton<CompanyDetailsDto>("推进", e);
+            var edit = dataGridView1.GetCommonByButton<CompanyDetailsDto>("编辑", e) ?? dataGridView1.GetCommonByContent<CompanyDetailsDto>("公司名称", e);
             if (delete != null && this.PopUpDialog($"您确定要删除【{delete.CompanyName}】吗？"))
             {
                 var flag = easyCrud.DeleteByExp<CompanyDetails>(x => x.ID == delete.ID);
@@ -548,7 +553,7 @@ namespace WinFormsApp1
 
         private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var dict = this.SetCustomizeForms(new CustomizeFormsExtentions.CustomizeFormInput
+            var dict = this.SetCustomizeFormsNew(new CustomizeFormsExtentions.CustomizeFormInput
             {
                 FormTitle = "一键背调",
                 inputs = new List<CustomizeFormsExtentions.CustomizeValueInput>

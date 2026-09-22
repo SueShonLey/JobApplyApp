@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WinformLib;
 using static WinformLib.CustomizeFormsExtentions;
 
@@ -180,8 +181,8 @@ namespace WinFormsApp1.Ext
                         FlowLayoutPanel checkPanel = new FlowLayoutPanel
                         {
                             Location = new System.Drawing.Point(FormPadding + LabelAndValuePadding, currentY),
-                            Height = defualtHeight*2,
-                            Width = 400,
+                            Height = defualtHeight*5,
+                            Width = 450,
                             WrapContents = true,
                             AutoSize = false,
                             BackColor = Color.Transparent
@@ -402,5 +403,25 @@ namespace WinFormsApp1.Ext
             }
         }
 
+
+        public static T GetCommonByContent<T>(this DataGridView dataGridView1,string title, DataGridViewCellEventArgs e) where T : class, new()
+        {
+            //点中标题头不算；点中指定列单元格才算；
+            try
+            {
+                if (e.RowIndex < 0)// 排除点击表头（RowIndex=-1）
+                    return null;
+                DataGridViewColumn col = dataGridView1.Columns[e.ColumnIndex];
+                if (!col.HeaderText.Equals(title))
+                {
+                    return null;
+                }
+                return dataGridView1?.Rows[e.RowIndex]?.Tag as T;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

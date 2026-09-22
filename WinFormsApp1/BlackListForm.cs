@@ -68,7 +68,7 @@ namespace WinFormsApp1
             QueryInfo();
         }
 
-        List<string> avoiddata = new List<string> { "被仲裁", "被执行", "拖工资", "风评差", "无双休", "加班多", "流动大", "无社保", "同事差", "不尊重劳动者" };
+        List<string> avoiddata = new List<string> { "被仲裁", "被执行", "拖工资", "风评差", "无双休", "假双休", "无节假", "加班多", "流动大", "无社保", "同事差", "环境差", "外包岗", "PUA", "24h待命", "不稳定", "一言堂", "克扣人工", "调岗逼离", "无心招人(KPI/HR态度差/套方案)", "不尊重劳动者" };
         /// <summary>
         /// 新增
         /// </summary>
@@ -90,7 +90,7 @@ namespace WinFormsApp1
                         Label = "避雷原因",
                         FormControlType = CustomizeFormsExtentions.FormControlType.CheckBox,
                         Value = avoiddata,
-                        VertiPadding = 80
+                        VertiPadding = 170
                     },
                     new CustomizeFormsExtentions.CustomizeValueInput
                     {
@@ -119,7 +119,7 @@ namespace WinFormsApp1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var easy = EasyCrudSingleton.Instance;
-            var entity1 = dataGridView1.GetCommonByButton<BlackListInfo>("编辑", e);
+            var entity1 = dataGridView1.GetCommonByButton<BlackListInfo>("编辑", e) ?? dataGridView1.GetCommonByContent<BlackListInfo>("公司名称", e);
             var entity2 = dataGridView1.GetCommonByButton<BlackListInfo>("删除", e);
             var entity =    entity1 ??  entity2;
             var queryEntity = new BlackListInfo();
@@ -145,7 +145,7 @@ namespace WinFormsApp1
                         FormControlType = CustomizeFormsExtentions.FormControlType.CheckBox,
                         Value = avoiddata,
                         DefaultValue = queryEntity.AvoidReason.Replace("、",","),
-                        VertiPadding = 80
+                        VertiPadding = 170
                     },
                     new CustomizeFormsExtentions.CustomizeValueInput
                     {
@@ -170,8 +170,9 @@ namespace WinFormsApp1
                     new_entity.RelatedLink = dict["相关链接"];
                     new_entity.Remark = dict["更多备注"];
                     EasyCrudSingleton.Instance.Update(new_entity);
+                    QueryInfo();
                 }
-                QueryInfo();
+                
             }
             else if (entity2 != null)
             {
