@@ -188,6 +188,7 @@ namespace WinFormsApp1
                     this.PopUpTips("ÐÂÔöÊ§°Ü");
                 }
             }
+            this.WindowState = FormWindowState.Normal;
         }
 
         /// <summary>
@@ -367,6 +368,7 @@ namespace WinFormsApp1
             {
                 var id = reject.ID;
                 var flag = easyCrud.UpdateSetWhere<CompanyDetails>(x => x.Status, 0, x => x.ID == id);
+                var flag3 = easyCrud.UpdateSetWhere<CompanyDetails>(x => x.LatestTime, DateTime.Now, x => x.ID == id);
                 var flag2 = easyCrud.UpdateSetWhere<CompanyDetails>(x => x.Stage, EnumStage.ResultsAlreadyAvailable.GetHashCode(), x => x.ID == id);
                 if (flag)
                 {
