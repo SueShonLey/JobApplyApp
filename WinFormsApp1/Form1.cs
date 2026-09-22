@@ -242,10 +242,7 @@ namespace WinFormsApp1
             }
 
             //  渲染表格
-            dataGridView1.SetCommonWithUI(new DataGridViewExtentions.DataDisplayEntity<CompanyDetailsDto>
-            {
-                ButtonList = new List<string> { "推进", "编辑", "拒绝", "删除" },
-                headtextList = new List<(System.Linq.Expressions.Expression<Func<CompanyDetailsDto, object>> fields, string name, int width)>
+            var headlist = new List<(System.Linq.Expressions.Expression<Func<CompanyDetailsDto, object>> fields, string name, int width)>
                  {
                       (x => x.CompanyName, "公司名称", 200),
                       (x => x.Stage, "投递阶段", 100),
@@ -255,7 +252,16 @@ namespace WinFormsApp1
                       (x => x.Position, "岗位", 150),
                       (x => x.Channel, "投递渠道", 90),
                       (x => x.LatestTime, "最新反馈时间", 150),
-                 },
+                 };
+            if (checkBox4.Checked)
+            {
+                var noapperList = new List<string> {  "薪资", "期望"};
+                headlist = headlist.Where(x => !noapperList.Contains(x.name)).ToList();
+            }
+            dataGridView1.SetCommonWithUI(new DataGridViewExtentions.DataDisplayEntity<CompanyDetailsDto>
+            {
+                ButtonList = new List<string> { "推进", "编辑", "拒绝", "删除" },
+                headtextList = headlist,
                 DataList = destictlist,
                 changeLineFuns = (feilds, values, cells) =>
                 {
@@ -291,7 +297,7 @@ namespace WinFormsApp1
             {
                 if (item.HeaderText.Equals("操作"))
                 {
-                    item.Width = 80;
+                    item.Width = 50;
                 }
             }
 
@@ -451,7 +457,6 @@ namespace WinFormsApp1
             {
                 EditForm form = new EditForm(edit, QueryInfos,this.TopMost);
                 form.Show();
-                QueryInfos();
             }
         }
 
