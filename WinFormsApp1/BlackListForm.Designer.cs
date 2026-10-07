@@ -34,6 +34,7 @@
             label1 = new Label();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
+            button2 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -41,6 +42,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label1);
@@ -53,7 +55,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(734, 37);
+            button1.Location = new Point(622, 39);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 2;
@@ -65,7 +67,7 @@
             // 
             textBox1.Location = new Point(67, 39);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(645, 27);
+            textBox1.Size = new Size(549, 27);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -98,6 +100,16 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // button2
+            // 
+            button2.Location = new Point(731, 38);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 3;
+            button2.Text = "导出";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // BlackListForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
@@ -123,5 +135,6 @@
         private TextBox textBox1;
         private Label label1;
         private DataGridView dataGridView1;
+        private Button button2;
     }
 }

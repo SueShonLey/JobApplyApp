@@ -36,7 +36,7 @@ namespace WinFormsApp1
         /// </summary>
         private void QueryInfo()
         {
-            var queryText = textBox1.Text.Trim().Replace("股份有限公司", "").Replace("有限公司","").Replace("公司", "");
+            var queryText = textBox1.Text.Trim().Replace("股份有限公司", "").Replace("有限公司", "").Replace("公司", "");
             var list = EasyCrudSingleton.Instance.GetList<BlackListInfo>(x => x.Name.Contains(queryText));
             if (!list.Any())
             {
@@ -121,9 +121,9 @@ namespace WinFormsApp1
             var easy = EasyCrudSingleton.Instance;
             var entity1 = dataGridView1.GetCommonByButton<BlackListInfo>("编辑", e) ?? dataGridView1.GetCommonByContent<BlackListInfo>("公司名称", e);
             var entity2 = dataGridView1.GetCommonByButton<BlackListInfo>("删除", e);
-            var entity =    entity1 ??  entity2;
+            var entity = entity1 ?? entity2;
             var queryEntity = new BlackListInfo();
-            if (entity != null) 
+            if (entity != null)
             {
                 queryEntity = easy.FirstOrDefault<BlackListInfo>(x => x.ID == entity.ID);
             }
@@ -172,7 +172,7 @@ namespace WinFormsApp1
                     EasyCrudSingleton.Instance.Update(new_entity);
                     QueryInfo();
                 }
-                
+
             }
             else if (entity2 != null)
             {
@@ -183,6 +183,19 @@ namespace WinFormsApp1
                 QueryInfo();
             }
 
+        }
+
+        /// <summary>
+        /// 导出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var easy = EasyCrudSingleton.Instance;
+            var backlist = easy.GetList<BlackListInfo>();
+            string names = string.Join(',', backlist.Select(x => x.Name).ToList());
+            names.ToClipboard();
         }
     }
 }
