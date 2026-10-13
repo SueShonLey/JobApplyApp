@@ -37,7 +37,7 @@ namespace WinFormsApp1
         private void QueryInfo()
         {
             var queryText = textBox1.Text.Trim().Replace("股份有限公司", "").Replace("有限公司", "").Replace("公司", "");
-            var list = EasyCrudSingleton.Instance.GetList<BlackListInfo>(x => x.Name.Contains(queryText));
+            var list = EasyCrudSingleton.Instance.GetList<BlackListInfo>(x => x.Name.Contains(queryText)).OrderBy(x=>x.Name).ToList();
             if (!list.Any())
             {
                 dataGridView1.DataSource = null;
@@ -112,6 +112,7 @@ namespace WinFormsApp1
                 entity.RelatedLink = dict["相关链接"];
                 entity.Remark = dict["更多备注"];
                 EasyCrudSingleton.Instance.Insert(entity);
+                textBox1.Text = entity.Name;
                 QueryInfo();
             }
         }
