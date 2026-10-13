@@ -576,7 +576,7 @@ namespace WinFormsApp1
             if (dict.Count != 0)
             {
                 var CompanyName = dict["公司完整名称"];
-                List<string> data = new List<string> { "https://zhiq.zhaopin.com/gongsidianping/0-0-@", "https://www.baidu.com/s?wd=@怎么样", "https://www.tianyancha.com/search?key=@", "https://www.zhihu.com/search?type=content&q=@怎么样", "https://www.xiaohongshu.com/search_result_ai?keyword=@怎么样" };
+                List<string> data = new List<string> { "https://zhiq.zhaopin.com/gongsidianping/0-0-@", "https://www.baidu.com/s?wd=@怎么样", "https://www.tianyancha.com/search?key=@", "https://www.zhihu.com/search?type=content&q=@怎么样", "https://www.xiaohongshu.com/search_result_ai?keyword=@怎么样",$"https://ditu.amap.com/ssr/search?query_type=TQUERY&query=@" };
 
                 // 查一下黑名单
                 var backList = easyCrud.FirstOrDefault<BlackListInfo>(x => x.Name.Contains(CompanyName.Replace("有限公司", "").Replace("公司", "")));
